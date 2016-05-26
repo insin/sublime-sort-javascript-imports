@@ -1,0 +1,9 @@
+[
+  {
+    "id": "edit",
+    "children": [
+      {"id": "permute"},
+      {"command": "sort_js_imports", "caption": "Sort JavaScript Imports", "mnemonic": "J"}
+    ]
+  }
+]
