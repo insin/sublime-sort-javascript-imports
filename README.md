@@ -1,10 +1,10 @@
 # Sort JavaScript Imports
 
-Sublime Text package adding a new Sort command which sorts selected lines comtaining JavaScript `import` statements or `require()` calls by the modules they're importing.
+Adds a Sort JavaScript Imports command to Sublime Text 2 or 3, which sorts selected lines containing JavaScript `import` statements or `require()` calls by the module path they're importing.
 
 ## Install via [Package Control](https://packagecontrol.io/) ([pending](https://github.com/wbond/package_control_channel/pull/5541))
 
-`Ctrl+Shift+P`/`Command+Shift+P` → Package Control: Install Package → Sort JavaScript Imports
+`Ctrl-Shift-P`/`Command-Shift-P` → Package Control: Install Package → Sort JavaScript Imports
 
 ## Install via `git clone`
 
@@ -12,12 +12,14 @@ Preferences → Browse Packages… → `git clone https://github.com/insin/subli
 
 ## Usage
 
-Select lines containing the import statements you want to sort, then either:
+Select lines containing the import statements you want to sort, then use either of:
 
-- `Ctrl+Shift+P` → Sort JavaScript Imports, or
-- `Alt+F9` on Linux/Windows or `Alt+F5` on Mac (by default)
+- Command palette: `Ctrl-Shift-P`/`Command-Shift-P` → Sort JavaScript Imports
+- Default key binding: `Alt-F9` on Linux/Windows or `Alt-F5` on Mac
 
-Lines will be sorted based on the module being imported, respecting (and normalising) any blank lines used to split the imports into different sections.
+Lines will be sorted based on the module path being imported, respecting (and normalising) any blank lines used to divide imports into different categories.
+
+Any non-import lines in the selection will be moved to the end, separated by a new blank line if necessary. [Let me know](https://github.com/insin/sublime-sort-javascript-imports/issues/new) if there's a preferable way to handle these.
 
 ## Import ordering
 
