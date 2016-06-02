@@ -2,7 +2,7 @@
 
 Adds a Sort JavaScript Imports command to Sublime Text 2 or 3, which sorts selected lines containing JavaScript `import` statements or `require()` calls by the module path they're importing.
 
-## Install via [Package Control](https://packagecontrol.io/) ([pending](https://github.com/wbond/package_control_channel/pull/5541))
+## Install via [Package Control](https://packagecontrol.io/)
 
 `Ctrl-Shift-P`/`Command-Shift-P` → Package Control: Install Package → Sort JavaScript Imports
 
