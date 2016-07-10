@@ -55,6 +55,7 @@ def permute_lines(f, v, e):
     for r in regions:
         txt = v.substr(r)
         lines = txt.splitlines()
-        lines = f(lines)
+        sorted_lines = f(lines)
 
-        v.replace(e, r, u"\n".join(lines))
+        if sorted_lines != lines:
+            v.replace(e, r, u"\n".join(sorted_lines))
