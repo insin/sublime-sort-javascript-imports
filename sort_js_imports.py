@@ -38,7 +38,7 @@ def module_sort_key(line):
         module_weight = 0
     elif ascend_path:
         module_weight = -ascend_path.count('/')
-    return module_weight, module_name
+    return module_weight, module_name.lower()
 
 def sort_js_imports(lines):
     """

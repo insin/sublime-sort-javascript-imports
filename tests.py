@@ -23,6 +23,24 @@ if __name__ == '__main__':
             ]
             self.assertEqual(sort_js_imports(input_lines), expected_output_lines)
 
+        def test_import_case(self):
+            """
+            Import sorting should be case-insensitve.
+            """
+            input_lines = [
+                "import Route from 'react-router/lib/Route'",
+                "import Router from 'react-router/lib/Router'",
+                "import IndexRoute from 'react-router/lib/IndexRoute'",
+                "import hashHistory from 'react-router/lib/hashHistory'",
+            ]
+            expected_output_lines = [
+                "import hashHistory from 'react-router/lib/hashHistory'",
+                "import IndexRoute from 'react-router/lib/IndexRoute'",
+                "import Route from 'react-router/lib/Route'",
+                "import Router from 'react-router/lib/Router'",
+            ]
+            self.assertEqual(sort_js_imports(input_lines), expected_output_lines)
+
         def test_sort_weightings(self):
             """
             Where top-level, parent and local imports are mixed together in the
